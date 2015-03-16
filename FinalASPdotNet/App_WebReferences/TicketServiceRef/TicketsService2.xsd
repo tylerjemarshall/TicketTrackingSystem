@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50006/TicketsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFTicketService" />
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectByEmpNum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assignedToNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectByEmpNumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFTicketService" minOccurs="0" name="SelectByEmpNumResult" nillable="true" type="q1:ArrayOfTicket" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTicketByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tickNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTicketByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFTicketService" minOccurs="0" name="SelectTicketByIDResult" nillable="true" type="q2:Ticket" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCompleted">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="completed" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ticketNum" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCompletedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

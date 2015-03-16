@@ -1,0 +1,10 @@
+M:\Semester3\TicketLibrary\TicketLibrary\TicketLibrary\bin\Debug\TicketLibrary.dll
+M:\Semester3\TicketLibrary\TicketLibrary\TicketLibrary\bin\Debug\TicketLibrary.pdb
+M:\Semester3\TicketLibrary\TicketLibrary\TicketLibrary\obj\Debug\TicketLibrary.dll
+M:\Semester3\TicketLibrary\TicketLibrary\TicketLibrary\obj\Debug\TicketLibrary.pdb
+M:\Semester3\TicketLibrary\TicketLibrary\TicketLibrary\obj\Debug\TicketLibrary.csprojResolveAssemblyReference.cache
+J:\Web\TicketLibrary\TicketLibrary\TicketLibrary\bin\Debug\TicketLibrary.dll
+J:\Web\TicketLibrary\TicketLibrary\TicketLibrary\bin\Debug\TicketLibrary.pdb
+J:\Web\TicketLibrary\TicketLibrary\TicketLibrary\obj\Debug\TicketLibrary.csprojResolveAssemblyReference.cache
+J:\Web\TicketLibrary\TicketLibrary\TicketLibrary\obj\Debug\TicketLibrary.dll
+J:\Web\TicketLibrary\TicketLibrary\TicketLibrary\obj\Debug\TicketLibrary.pdb
