@@ -15,7 +15,16 @@
             <asp:Button ID="btnView" runat="server" Text="View Assigned Tickets" OnClick="btnView_Click" style="margin-bottom: 0px" />
             <br />
             <br />
-            Ticket Number:<asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True" DataSourceID="ObjectDataSource2" DataTextField="TicketNumber" DataValueField="TicketNumber" ></asp:DropDownList>
+            Ticket Number:
+            <asp:DropDownList 
+                ID="DropDownList1" 
+                runat="server" 
+                OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" 
+                AutoPostBack="True" 
+                DataSourceID="ObjectDataSource2" 
+                DataTextField="TicketNumber" 
+                DataValueField="TicketNumber">
+            </asp:DropDownList>
             <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="SelectByEmpNum" TypeName="TicketServiceRef.TicketsServiceClient">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="txtEmpNum" Name="assignedToNum" PropertyName="Text" Type="Int32" />

@@ -17,7 +17,7 @@ public partial class EZMyTickets : System.Web.UI.Page
     {
         TicketsServiceClient tsc = new TicketsServiceClient();
         int assignId = Convert.ToInt32(txtEmpNum.Text);
-        DropDownList1.DataSource = tsc.SelectByEmpNum(assignId);
+        //DropDownList1.DataSource = tsc.SelectByEmpNum(assignId);
 
         DropDownList1.DataTextField = "TicketNumber";
         DropDownList1.DataBind();
