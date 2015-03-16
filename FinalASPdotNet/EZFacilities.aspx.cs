@@ -59,8 +59,18 @@ public partial class EZFacilities : System.Web.UI.Page
         txtEmail.Enabled = true;
 
         TicketUtilities tu = new TicketUtilities();
+        int num = 0;
+        try
+          
+        {
+            num = Convert.ToInt32(txtEmpNum.Text);
+        }
+        catch (FormatException fe) {
+            if (fe.Source != null)
+                Console.WriteLine("IOException source: {0}", fe.Source);
+            throw;
+        }
 
-        int num = Convert.ToInt32(txtEmpNum.Text);
         Employee emp = tu.GetEmpNum(num);
 
         if(emp != null)//if the record in database Employees table is not null do the following
@@ -102,7 +112,7 @@ public partial class EZFacilities : System.Web.UI.Page
 
         if (email.Count != 0)
         {
-            GridView2.DataSource = email;
+            //GridView2.DataSource = email;
             GridView2.Visible = true;
             GridView2.DataBind();
             
