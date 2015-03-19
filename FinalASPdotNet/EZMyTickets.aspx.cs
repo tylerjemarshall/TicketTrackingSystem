@@ -8,22 +8,14 @@ using TicketServiceRef;
 
 public partial class EZMyTickets : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-
     protected void btnView_Click(object sender, EventArgs e)
     {
         TicketsServiceClient tsc = new TicketsServiceClient();
         int assignId = Convert.ToInt32(txtEmpNum.Text);
-        //DropDownList1.DataSource = tsc.SelectByEmpNum(assignId);
 
         DropDownList1.DataTextField = "TicketNumber";
         DropDownList1.DataBind();
-
     }
-
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
     {
         TicketsServiceClient tsc = new TicketsServiceClient();
@@ -38,7 +30,6 @@ public partial class EZMyTickets : System.Web.UI.Page
         if (tic.Status == "Completed")
         {
             CheckBox1.Checked = true;
-            
         }
     }
 
@@ -53,7 +44,6 @@ public partial class EZMyTickets : System.Web.UI.Page
         {
             tsc.UpdateCompleted("Assigned", Convert.ToInt32(lblTicketNumber.Text));
         }
-     
         int tickNum = Convert.ToInt32(DropDownList1.SelectedValue);
         Ticket tic = tsc.SelectTicketByID(tickNum);
 
@@ -61,6 +51,5 @@ public partial class EZMyTickets : System.Web.UI.Page
         lblBuilding.Text = tic.Building;
         lblDescription.Text = tic.Description;
         lblStatus.Text = tic.Status;      
-      
     }
 }
