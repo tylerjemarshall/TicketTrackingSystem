@@ -7,7 +7,6 @@ using System.Text;
 
 namespace WCFTicketService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "ITicketsService" in both code and config file together.
 
     [ServiceContract]
     public interface ITicketsService
@@ -37,6 +36,8 @@ namespace WCFTicketService
         private int assignedTo;
 
         public Ticket(){} //this empty constructor has the impact of your connection
+
+        //can use various contructors to assign values.
 
         public Ticket(int ticketNumber, int employeeNumber, DateTime dateSubmitted, String building, String description, String status, int assignedTo)
         {
@@ -91,7 +92,6 @@ namespace WCFTicketService
             Building = building;
             Description = description;
             Status = status;
-            //AssignedTo = assignedTo;
         }
 
         public Ticket(string status)
@@ -100,7 +100,7 @@ namespace WCFTicketService
         }
 
 
-
+        //getters and setters
         [DataMember]
         public int TicketNumber
         {

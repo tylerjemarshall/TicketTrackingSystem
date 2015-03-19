@@ -10,6 +10,7 @@ public partial class EZFacilities : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        //changes text box to current day in format yyyy-MM-dd on page load
         txtDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
       
     }
@@ -20,6 +21,8 @@ public partial class EZFacilities : System.Web.UI.Page
         TicketUtilities tl = new TicketUtilities();
         lblOutput.Text = "Thank you for your submission";
         
+        //visible is changed depending on if employee exists
+        //client can now enter new emp
         if (lblMessage.Visible)
         {
             Employee em = new Employee(Convert.ToInt32(txtEmpNum.Text), Convert.ToString(txtFN.Text), 
@@ -35,6 +38,7 @@ public partial class EZFacilities : System.Web.UI.Page
 
         int tickNum = tl.InsertTicketNum(t);
 
+        //clear all fields
         txtEmpNum.Text = "";
         txtFN.Text = "";
         txtLN.Text = "";
@@ -73,7 +77,7 @@ public partial class EZFacilities : System.Web.UI.Page
 
         Employee emp = tu.GetEmpNum(num);
 
-        if(emp != null)//if the record in database Employees table is not null do the following
+        if(emp != null)//if the record in database Employees table exists
         {
             txtFN.Text = emp.FirstName;
             txtLN.Text = emp.LastName;
@@ -112,18 +116,13 @@ public partial class EZFacilities : System.Web.UI.Page
 
         if (email.Count != 0)
         {
-            //GridView2.DataSource = email;
             GridView2.Visible = true;
-            GridView2.DataBind();
-            
-           
+            GridView2.DataBind();  
         }
         else
         {
             lblPin.Text = "Email address doesn't exist. Please try again!";
-        }
-
-        
+        } 
     }
 
 }

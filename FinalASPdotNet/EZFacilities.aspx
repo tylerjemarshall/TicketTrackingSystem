@@ -15,7 +15,6 @@
     <form id="form1" runat="server">
     <div>
 
-        
         <asp:Panel ID="Panel1" runat="server" GroupingText="Tickets Tracking System">
             
             <table>
@@ -98,7 +97,6 @@
                     <asp:BoundField DataField="Building" HeaderText="Building" SortExpression="Building" />
                     <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                     <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
-                    <%--<asp:BoundField DataField="AssignedTo" HeaderText="AssignedTo" SortExpression="AssignedTo" />--%>
                     <asp:BoundField DataField="AssignedTo" HeaderText="AssignedTo" SortExpression="AssignedTo" />
                 </Columns>
             </asp:GridView>
@@ -115,12 +113,6 @@
             <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSource2">
                 <Columns>
                     <asp:BoundField DataField="TicketNumber" HeaderText="TicketNumber" SortExpression="TicketNumber" />
-                    <%--<asp:BoundField DataField="EmployeeNumber" HeaderText="EmployeeNumber" SortExpression="EmployeeNumber" />
-                    <asp:BoundField DataField="DateSubmitted" HeaderText="DateSubmitted" SortExpression="DateSubmitted" />
-                    <asp:BoundField DataField="Building" HeaderText="Building" SortExpression="Building" />
-                    <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                    <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
-                    <asp:BoundField DataField="AssignedTo" HeaderText="AssignedTo" SortExpression="AssignedTo" />--%>
                     <asp:BoundField DataField="EmployeeNumber" HeaderText="EmployeeNumber" SortExpression="EmployeeNumber" />
                     <asp:BoundField DataField="DateSubmitted" HeaderText="DateSubmitted" SortExpression="DateSubmitted" />
                     <asp:BoundField DataField="Building" HeaderText="Building" SortExpression="Building" />
@@ -132,10 +124,7 @@
             <br />
             <br />
             <asp:Label ID="lblPin" runat="server" Text="Label"></asp:Label>
-        </asp:Panel>
-        
-        <br />
-
+        </asp:Panel><br />
         <asp:Panel ID="Panel3" runat="server">
 
         </asp:Panel>
