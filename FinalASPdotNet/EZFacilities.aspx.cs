@@ -8,17 +8,19 @@ using TicketLibrary;
 
 public partial class EZFacilities : System.Web.UI.Page
 {
+    //happens upon page load
     protected void Page_Load(object sender, EventArgs e)
     {
         //changes text box to current day in format yyyy-MM-dd on page load
         txtDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
       
     }
-
+    //Submit button
     protected void btn1_Click(object sender, EventArgs e)
     {
         
         TicketUtilities tl = new TicketUtilities();
+        //updates display box
         lblOutput.Text = "Thank you for your submission";
         
         //visible is changed depending on if employee exists
@@ -47,14 +49,15 @@ public partial class EZFacilities : System.Web.UI.Page
         txtEmail.Text = "";
         txtIssueDesc.Text = "";
 
-
+        //displays pin (ticketNumber)
         lblPinNum.Text = "Your Pin is:" + tickNum;
             
     }
 
-
+    //Continue button
     protected void btnAutoFill_Click(object sender, EventArgs e)
     {
+        //populates text boxes based on Employee Number. Doesn't check if box is empty.
 
         txtFN.Enabled = true;
         txtLN.Enabled = true;
@@ -64,16 +67,13 @@ public partial class EZFacilities : System.Web.UI.Page
 
         TicketUtilities tu = new TicketUtilities();
         int num = 0;
-        try
-          
-        {
+        //This was catching error, might be cause converting empty string to num. Going to catch.
+        try{
             num = Convert.ToInt32(txtEmpNum.Text);
-        }
-        catch (FormatException fe) {
+        } catch (FormatException fe) {
             if (fe.Source != null)
-                Console.WriteLine("IOException source: {0}", fe.Source);
-            throw;
-        }
+                lblOutput.Text=("IOException: "+ fe.Message);
+            throw;}
 
         Employee emp = tu.GetEmpNum(num);
 
@@ -87,6 +87,7 @@ public partial class EZFacilities : System.Web.UI.Page
 
             DropDownList2.SelectedValue = emp.JobDescription;
             lblMessage.Visible = false;
+            //lblmessage is for createing new employee
         }
         else
         {
@@ -95,6 +96,7 @@ public partial class EZFacilities : System.Web.UI.Page
         }
     }
 
+    //checks status from ticket pin
     protected void btuView_Click(object sender, EventArgs e)
     {
 
@@ -106,7 +108,7 @@ public partial class EZFacilities : System.Web.UI.Page
     }
 
 
-
+    //retrieves pin by email
     protected void btnEnter_Click(object sender, EventArgs e)
     {
         TicketUtilities tu = new TicketUtilities();

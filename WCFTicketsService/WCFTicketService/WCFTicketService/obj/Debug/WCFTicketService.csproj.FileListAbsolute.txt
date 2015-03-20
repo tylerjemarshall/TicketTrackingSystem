@@ -13,3 +13,8 @@ M:\COMP 235 - Web Dev\Web Final Project\WCFTicketsService\WCFTicketService\WCFTi
 M:\COMP 235 - Web Dev\Web Final Project\WCFTicketsService\WCFTicketService\WCFTicketService\obj\Debug\WCFTicketService.csprojResolveAssemblyReference.cache
 M:\COMP 235 - Web Dev\Web Final Project\WCFTicketsService\WCFTicketService\WCFTicketService\obj\Debug\WCFTicketService.dll
 M:\COMP 235 - Web Dev\Web Final Project\WCFTicketsService\WCFTicketService\WCFTicketService\obj\Debug\WCFTicketService.pdb
+C:\Users\Tyler M\Documents\GitHub\TicketTrackingSystem\WCFTicketsService\WCFTicketService\WCFTicketService\bin\WCFTicketService.dll
+C:\Users\Tyler M\Documents\GitHub\TicketTrackingSystem\WCFTicketsService\WCFTicketService\WCFTicketService\bin\WCFTicketService.pdb
+C:\Users\Tyler M\Documents\GitHub\TicketTrackingSystem\WCFTicketsService\WCFTicketService\WCFTicketService\obj\Debug\WCFTicketService.csprojResolveAssemblyReference.cache
+C:\Users\Tyler M\Documents\GitHub\TicketTrackingSystem\WCFTicketsService\WCFTicketService\WCFTicketService\obj\Debug\WCFTicketService.dll
+C:\Users\Tyler M\Documents\GitHub\TicketTrackingSystem\WCFTicketsService\WCFTicketService\WCFTicketService\obj\Debug\WCFTicketService.pdb

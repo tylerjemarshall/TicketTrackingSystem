@@ -39,7 +39,7 @@ public partial class EZTicketManager : System.Web.UI.Page
 
     protected void btuViewAll_Click(object sender, EventArgs e)
     {
-        //updates GridView1 to select *
+        //updates GridView1 to select * (all)
         TicketUtilities tu = new TicketUtilities();
         List<Ticket> ticks =TicketUtilities.GetAllTickets();
         GridView1.DataSource = ticks;
@@ -73,6 +73,8 @@ public partial class EZTicketManager : System.Web.UI.Page
 
     }
   
+
+    //editing currently doesn't work. 
     protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
     {
         //When client changes status of ticket
